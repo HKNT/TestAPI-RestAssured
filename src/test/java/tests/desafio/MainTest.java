@@ -28,7 +28,6 @@ public class MainTest extends BaseTest {
                 //verbos http
                 .get("/contas")
                 .then()
-                .log().all()
                 .statusCode(401)
                 .body(is("Unauthorized"))
         ;
@@ -45,7 +44,6 @@ public class MainTest extends BaseTest {
                 .body(enviaLogin)
                 .post("/signin")
                 .then()
-                .log().all()
                 .statusCode(200)
                 .extract().jsonPath().getMap("");
     }
@@ -62,7 +60,6 @@ public class MainTest extends BaseTest {
                         //verbos http
                         .post("/contas")
                         .then()
-                        .log().all()
                         .statusCode(201)
                         .body("nome", is(conta.getNome()))
                         .extract().jsonPath().getMap("")
@@ -84,7 +81,6 @@ public class MainTest extends BaseTest {
                         //verbos http
                         .post("/contas")
                         .then()
-                        .log().all()
                         .statusCode(201)
                         .body("nome", is(conta.getNome()))
                         .extract().jsonPath().getMap("")
@@ -100,12 +96,10 @@ public class MainTest extends BaseTest {
         given()
                 .header("Authorization","JWT "+recebeDadosLogin.get("token"))
                 .body(conta)
-                .log().all()
                 .when()
                 //verbos http
                 .post("/contas")
                 .then()
-                .log().all()
                 .statusCode(400)
                 .body("error", containsString("existe uma conta com esse nome"))
         ;
@@ -131,12 +125,10 @@ public class MainTest extends BaseTest {
                 given()
                         .header("Authorization","JWT "+recebeDadosLogin.get("token"))
                         .body(cadastroTransacao)
-                        .log().all()
                         .when()
                         //verbos http
                         .post("/transacoes")
                         .then()
-                        .log().all()
                         .statusCode(201)
                         .body("conta_id", is(cadastroTransacao.get("conta_id")))
                         .body("usuario_id", is(cadastroTransacao.get("usuario_id")))
