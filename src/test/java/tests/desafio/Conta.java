@@ -1,4 +1,4 @@
-package tests.desafio.ClassAuxDesafio;
+package tests.desafio;
 
 public class Conta {
     private Long id;

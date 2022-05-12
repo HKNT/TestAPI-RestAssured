@@ -1,4 +1,4 @@
-package br.com.sicredi.api;
+package br.com.testapi.api;
 
 public class Main {
     public static void main(String[] args) {
