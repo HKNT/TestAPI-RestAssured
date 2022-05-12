@@ -1,5 +1,7 @@
 # TestAPI-RestAssured
-Projeto de teste de API utilizando o framework RestAssured para o JAVA. Utilizei de um desafio encontrado na internet para criar este portfolio, assim demonstrando o meu conhecimento. 
+Projeto de teste de API utilizando o framework RestAssured para o JAVA. Utilizei de um desafio encontrado na internet para criar este portfolio, assim demonstrando o meu conhecimento.
+
+OBS: A solução apresentada é uma das possiveis soluções que cabe neste projeto, o objetivo final é ter algo para ser analisado por avaliadores, mas qualquer critica é sempre bem vinda, desde que seja feita com respeito, a ideia é sempre evoluir.
 
                                                       ==Desafio==
                                                       
